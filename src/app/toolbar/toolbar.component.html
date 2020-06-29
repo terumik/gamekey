@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+  <span>VS Entertainment</span>
+  <span class="spacer"></span>
+  <ng-container *ngIf="isLoading; else elseTemplate">
+    <mat-spinner diameter="30"></mat-spinner>
+  </ng-container>
+  <ng-template #elseTemplate>
+    <span class="font-small" *ngIf="user">Welcome, {{user.email}}</span>
+    <button mat-button (click)="user? onLogout() : onLogin()">{{user? 'Logout' : 'Login'}}</button>
+  </ng-template>
+</mat-toolbar>

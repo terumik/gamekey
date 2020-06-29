@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "vsentertainment-3eda4": {
+      "hosting": {
+        "VSEntertainment": [
+          "vsentertainment-3eda4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "vsentertainment-3eda4"
+  }
+}

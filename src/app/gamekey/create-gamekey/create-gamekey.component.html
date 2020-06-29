@@ -1,0 +1,22 @@
+<div>Game Key: {{gameKey?.gameKey}}</div>
+<form [formGroup]="userForm" (ngSubmit)=onSubmit() class="flex-column mt-1">
+  <mat-form-field>
+    <mat-label for="name">Name</mat-label>
+    <input matInput id="name" type="text" formControlName="name">
+  </mat-form-field>
+  <mat-checkbox (change)="onToggleEmailOption()" formControlName="sendEmail">Send this game key by email</mat-checkbox>
+  <mat-form-field *ngIf="isEmailRequired">
+    <mat-label for="email">Email</mat-label>
+    <input matInput id="email" type="email" formControlName="email" email>
+  </mat-form-field>
+  <div class="flex-row mt-1 buttons">
+    <div>
+      <button mat-flat-button type="submit" color="primary" [disabled]="userForm.invalid && isEmailRequired">Save</button>
+      <button mat-flat-button type="reset" (click)="onCancel()">Cancel</button>
+    </div>
+    <button *ngIf="data" mat-flat-button type="button" color="warn" (click)="onDelete(gameKey.id)">Delete</button>
+  </div>
+  <ng-container *ngIf="outputMsg">
+    {{ outputMsg }}
+  </ng-container>
+</form>

@@ -1,0 +1,8 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-spinner::ng-deep circle {
+  stroke: #ffffffcc;
+  z-index: 10;
+}

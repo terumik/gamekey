@@ -1,0 +1,16 @@
+mat-card {
+  width: 60%;
+  margin: 3rem auto;
+  form {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}
+
+.toggle-auth-mode{
+  span {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
