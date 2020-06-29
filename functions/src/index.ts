@@ -15,7 +15,7 @@ export const sendEmail = functions.firestore.document('gamekeys/{id}')
     const gamekeySnap = await db.collection('gamekeys').doc(context.params.id).get();
 
     const gamekeyDoc = gamekeySnap.data() || {};
-    //{ _id: null, name: 'terumi', email: 't.kusaka3@gmail.com', timestamp: 1593286885980, gameKey: 'BtJhgEkfM', sendEmail: true}
+    //{ _id: null, name: 'username', email: 'email@gmail.com', timestamp: 1593286885980, gameKey: 'BtJhgEkfM', sendEmail: true}
 
     const greeting = gamekeyDoc.name? `Hi ${gamekeyDoc.name},` : `Hi,`;
 
